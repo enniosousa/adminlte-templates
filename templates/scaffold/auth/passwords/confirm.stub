@@ -67,9 +67,11 @@
                 </div>
             </form>
 
+            @if(Route::has('password.request'))
             <p class="mt-3 mb-1">
-                <a href="{{ route('password.request') }}">Forgot Your Password?</a>
+                <a href="{{ route('password.request') }}">@lang('auth.confirm_passwords.forgot_your_password')</a>
             </p>
+            @endif
         </div>
         <!-- /.login-card-body -->
     </div>

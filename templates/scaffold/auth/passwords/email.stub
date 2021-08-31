@@ -74,12 +74,17 @@
                 </div>
             </form>
 
-            <p class="mt-3 mb-1">
-                <a href="{{ route("login") }}">Login</a>
+            @if(Route::has('login'))
+			<p class="mt-3 mb-1">
+                <a href="{{ route("login") }}">@lang('auth.sign_in')</a>
             </p>
+            @endif
+			
+			@if(Route::has('register'))
             <p class="mb-0">
-                <a href="{{ route("register") }}" class="text-center">Register a new membership</a>
+                <a href="{{ route("register") }}" class="text-center">@lang('auth.login.register_membership')</a>
             </p>
+            @endif
         </div>
         <!-- /.login-card-body -->
     </div>

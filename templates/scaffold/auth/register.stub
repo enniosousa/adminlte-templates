@@ -117,7 +117,11 @@
                 </div>
             </form>
 
-            <a href="{{ route('login') }}" class="text-center">I already have a membership</a>
+            @if(Route::has('login'))
+			<p class="mt-3 mb-1">
+                <a href="{{ route("login") }}">@lang('auth.sign_in')</a>
+            </p>
+            @endif
         </div>
         <!-- /.form-box -->
     </div><!-- /.card -->
